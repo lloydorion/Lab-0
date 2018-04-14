@@ -51,6 +51,9 @@
             this.card2 = new System.Windows.Forms.PictureBox();
             this.card1 = new System.Windows.Forms.PictureBox();
             this.flipTimer = new System.Windows.Forms.Timer(this.components);
+            this.restartLabel = new System.Windows.Forms.Button();
+            this.matchesLabel = new System.Windows.Forms.Label();
+            this.exitLabel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.card13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.card20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.card12)).BeginInit();
@@ -298,11 +301,44 @@
             this.flipTimer.Interval = 2000;
             this.flipTimer.Tick += new System.EventHandler(this.flipTimer_Tick);
             // 
+            // restartLabel
+            // 
+            this.restartLabel.Location = new System.Drawing.Point(499, 76);
+            this.restartLabel.Name = "restartLabel";
+            this.restartLabel.Size = new System.Drawing.Size(75, 23);
+            this.restartLabel.TabIndex = 70;
+            this.restartLabel.Text = "Restart";
+            this.restartLabel.UseVisualStyleBackColor = true;
+            this.restartLabel.Click += new System.EventHandler(this.restartLabel_Click);
+            // 
+            // matchesLabel
+            // 
+            this.matchesLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.matchesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matchesLabel.Location = new System.Drawing.Point(499, 11);
+            this.matchesLabel.Name = "matchesLabel";
+            this.matchesLabel.Size = new System.Drawing.Size(75, 52);
+            this.matchesLabel.TabIndex = 71;
+            this.matchesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // exitLabel
+            // 
+            this.exitLabel.Location = new System.Drawing.Point(499, 105);
+            this.exitLabel.Name = "exitLabel";
+            this.exitLabel.Size = new System.Drawing.Size(75, 23);
+            this.exitLabel.TabIndex = 72;
+            this.exitLabel.Text = "Exit";
+            this.exitLabel.UseVisualStyleBackColor = true;
+            this.exitLabel.Click += new System.EventHandler(this.exitLabel_Click);
+            // 
             // boardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 574);
+            this.ClientSize = new System.Drawing.Size(590, 574);
+            this.Controls.Add(this.exitLabel);
+            this.Controls.Add(this.matchesLabel);
+            this.Controls.Add(this.restartLabel);
             this.Controls.Add(this.card13);
             this.Controls.Add(this.card20);
             this.Controls.Add(this.card12);
@@ -373,6 +409,9 @@
         private System.Windows.Forms.PictureBox card2;
         private System.Windows.Forms.PictureBox card1;
         private System.Windows.Forms.Timer flipTimer;
+        private System.Windows.Forms.Button restartLabel;
+        private System.Windows.Forms.Label matchesLabel;
+        private System.Windows.Forms.Button exitLabel;
     }
 }
 
